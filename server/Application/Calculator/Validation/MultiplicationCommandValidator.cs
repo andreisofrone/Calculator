@@ -9,10 +9,12 @@ namespace Application.Calculator.Validation
         public MultiplicationCommandValidator()
         {
             RuleFor(cp => cp.FirstNumber)
-                .NotEmpty();
+                .NotNull()
+                .GreaterThanOrEqualTo(0);
 
             RuleFor(cp => cp.SecondNumber)
-                .NotEmpty();
+                .NotNull()
+                .GreaterThanOrEqualTo(0);
         }
     }
 }

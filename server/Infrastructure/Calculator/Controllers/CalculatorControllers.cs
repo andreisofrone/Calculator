@@ -31,7 +31,7 @@ public class CalculatorControllers : ControllerBase
          => Ok(await _mediator.Send(command));
 
     [HttpPost]
-    [Route("substract")]
+    [Route("subtract")]
     public async Task<IActionResult> Sum([FromBody] SubtractionCommand command)
          => Ok(await _mediator.Send(command));
 
