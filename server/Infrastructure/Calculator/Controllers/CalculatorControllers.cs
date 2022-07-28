@@ -1,4 +1,4 @@
-﻿using Application.Todos.Messages.Commands;
+﻿using Application.Calculator.Messages.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -17,10 +17,22 @@ public class CalculatorControllers : ControllerBase
 
     [HttpPost]
     [Route("sum")]
-    public async Task<IActionResult> Sum([FromRoute] SumCommand command)
-    {
-        await _mediator.Send(command);
+    public async Task<IActionResult> Sum([FromBody] SumCommand command)
+             => Ok(await _mediator.Send(command));
 
-        return Ok(command);
-    }
+    [HttpPost]
+    [Route("divide")]
+    public async Task<IActionResult> Sum([FromBody] DivisionCommand command)
+         => Ok(await _mediator.Send(command));
+
+    [HttpPost]
+    [Route("multiply")]
+    public async Task<IActionResult> Sum([FromBody] MultiplicationCommand command)
+         => Ok(await _mediator.Send(command));
+
+    [HttpPost]
+    [Route("substract")]
+    public async Task<IActionResult> Sum([FromBody] SubtractionCommand command)
+         => Ok(await _mediator.Send(command));
+
 }

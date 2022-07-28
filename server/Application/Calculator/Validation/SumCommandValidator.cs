@@ -3,10 +3,10 @@ using FluentValidation;
 
 namespace Application.Calculator.Validation
 {
-    public sealed class CalculatorCommandValidator
-         : AbstractValidator<CalculatorCommand>
+    public sealed class SumCommandValidator
+         : AbstractValidator<SumCommand>
     {
-        public CalculatorCommandValidator()
+        public SumCommandValidator()
         {
             RuleFor(cp => cp.FirstNumber)
                 .NotEmpty();

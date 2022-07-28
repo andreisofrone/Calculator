@@ -1,6 +1,4 @@
-﻿using Application.Calculator.Messages.Commands;
-
-namespace Application.Todos.Messages.Commands
+﻿namespace Application.Calculator.Messages.Commands
 {
     public class DivisionCommand
         : CalculatorCommand
