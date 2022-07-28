@@ -58,7 +58,7 @@ export default function App() {
 					alignItems: "center",
 				}}>
 				<Grid item xs={1}>
-					<TextField key="first-umber" variant="outlined" type="number" onChange={handleOnChangeFirstNumber} />
+					<TextField key="first-number" variant="outlined" type="number" onChange={handleOnChangeFirstNumber} />
 				</Grid>
 				<Grid item xs={1}>
 					<FormControlSelect

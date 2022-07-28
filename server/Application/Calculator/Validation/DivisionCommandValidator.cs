@@ -9,12 +9,10 @@ namespace Application.Calculator.Validation
         public DivisionCommandValidator()
         {
             RuleFor(cp => cp.FirstNumber)
-                .NotNull()
-                .GreaterThanOrEqualTo(0);
+                .NotNull();
 
             RuleFor(cp => cp.SecondNumber)
-                .NotNull()
-                .GreaterThanOrEqualTo(0);
+                .NotNull();
         }
     }
 }
